@@ -12,7 +12,7 @@ type AddressType = {
 type StreetType = {
     title: string;
 };
-type GovernmentBuildingsType = {
+export type GovernmentBuildingsType = {
     type: string;
     budget: number;
     staffCount: number;
