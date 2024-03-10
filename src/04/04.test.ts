@@ -1,3 +1,4 @@
+export {};
 test('should take old men older 90', () => {
     const ages = [18, 20, 2, 1, 100, 90, 14];
 

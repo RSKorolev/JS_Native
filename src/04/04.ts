@@ -1,3 +1,4 @@
+export {};
 const ages = [18, 20, 2, 1, 100, 90, 14];
 
 const predicate = (age: number) => {
