@@ -1,4 +1,5 @@
 import { CityType, GovernmentBuildingsType } from '../02/02_02';
+
 export function demolishHousesOnTheStreet(city: CityType, street: string) {
     return (city.houses = city.houses.filter(
         (houses) => houses.address.street.title !== street
