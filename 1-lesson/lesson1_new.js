@@ -94,46 +94,43 @@
 // console.log('users2: ', users2);
 // console.log('isEqual: ', users1 === users2);
 
-// const superUser = {
-//   id: 10,
-//   name: 'Clementina DuBuque',
-//   username: 'Moriah.Stanton',
-//   email: 'Rey.Padberg@karina.biz',
-//   address: {
-//     street: 'Kattie Turnpike',
-//     suite: 'Suite 198',
-//     city: 'Lebsackbury',
-//     zipcode: '31428-2261',
-//     geo: {
-//       lat: '-38.2386',
-//       lng: '57.2232',
-//     },
-//   },
-//   phone: '024-648-3804',
-//   website: 'ambrose.net',
-//   company: {
-//     name: 'Hoeger LLC',
-//     catchPhrase: 'Centralized empowering task-force',
-//     bs: 'target end-to-end models',
-//   },
-// };
+const superUser = {
+	id: 10,
+	name: 'Clementina DuBuque',
+	username: 'Moriah.Stanton',
+	email: 'Rey.Padberg@karina.biz',
+	address: {
+		street: 'Kattie Turnpike',
+		suite: 'Suite 198',
+		city: 'Lebsackbury',
+		zipcode: '31428-2261',
+		geo: {
+			lat: '-38.2386',
+			lng: '57.2232',
+		},
+	},
+	phone: '024-648-3804',
+	website: 'ambrose.net',
+	company: {
+		name: 'Hoeger LLC',
+		catchPhrase: 'Centralized empowering task-force',
+		bs: 'target end-to-end models',
+	},
+};
 
-// const newSuperUserCopy = { ...superUser };
-// newSuperUserCopy.address.city = 'Warsaw';
+const newSuperUserCopy = { ...superUser };
+newSuperUserCopy.address.city = 'Warsaw';
 
-// console.log('superUser: ', superUser.address);
-// console.log('NewSuperUserCopy: ', newSuperUserCopy.address);
+console.log('superUser: ', superUser.address);
+console.log('NewSuperUserCopy: ', newSuperUserCopy.address);
 
-//Пути для решения проблемыы spread оператора
+// Пути для решения проблемыы spread оператора
 
-// const newSuperUserCopy = {
-//   ...superUser,
-//   address: { ...superUser.address, geo: { ...superUser.address.geo } },
-// };
-// newSuperUserCopy.address.city = 'Warsaw';
+const newSuperUserCopy = { ...superUser, address: { ...superUser.address, geo: { ...superUser.address.geo } } };
+newSuperUserCopy.address.city = 'Warsaw';
 
-// console.log('superUser: ', superUser.address);
-// console.log('NewSuperUserCopy: ', newSuperUserCopy.address);
+console.log('superUser: ', superUser.address);
+console.log('NewSuperUserCopy: ', newSuperUserCopy.address);
 
 // structuredClone()
 
