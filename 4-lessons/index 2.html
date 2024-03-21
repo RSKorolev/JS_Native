@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example Page with External JS File</title>
+  <style>
+    /* Стили для примера c темой */
+    #app {
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin: 50px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div id="app"></div> -->
+  <script src="sprint1/lesson3/lesson3_new.js"></script>
+
+<!--________________________________________________________- /условия в синтексе вычисляемых свойств объекта / -->
+  <!-- <button id="toggleButton">Toggle Condition</button>
+
+  <script>
+
+  let condition = false;
+  
+  document.getElementById('toggleButton').onclick = function() {
+
+    condition = !condition;
+
+   
+    person = {
+      name: 'John',
+      [condition ? 'age' : 'height']: condition ? 25 : 180,
+    };
+
+    console.log('person', person);
+  };
+</script> -->
+
+  <!-- ________________________navigation_ routes_________________________- -->
+
+  <!-- <button id="homeButton">Go Home</button>
+  <button id="aboutButton">Go About</button>
+  <button id="contactButton">Go Contact</button>
+  
+  <script>
+    const routes = {
+      home: '/',
+      about: '/about',
+      contact: '/contact',
+    };
+  
+    let currentRoute = 'about';
+  
+    function navigate(route) {
+      currentRoute = route;// Эта строка обновляет переменную currentRoute значением, переданным в аргументе route.
+      console.log(routes[currentRoute]);
+    }
+  
+    document.getElementById('homeButton').onclick = function() {
+      navigate('home');
+    };
+  
+    document.getElementById('aboutButton').onclick = function() {
+      navigate('about');
+    };
+  
+    document.getElementById('contactButton').onclick = function() {
+      navigate('contact');
+    };
+  </script>
+ -->
+
+<!-- /______________________________switch theme________________________________________________________________________________________________/ -->
+  
+<div id="app">
+  <h1>Hello, Dynamic Theme!</h1>
+  <button id="toggleThemeButton">Toggle Theme</button>
+</div>
+
+<script>
+  let theme = "dark";
+
+  const themes = {
+    dark: {
+      backgroundColor: "#1a1a1a",
+      textColor: "#ffffff",
+    },
+    light: {
+      backgroundColor: "#ffffff",
+      textColor: "#333333",
+    },
+  };
+
+  const appContainer = document.getElementById("app");
+  console.log("appContainer", appContainer)
+
+  // Установка начальных стилей
+  appContainer.style.backgroundColor = themes[theme].backgroundColor;
+  appContainer.style.color = themes[theme].textColor;
+
+  // Обработка клика по кнопке для смены темы
+  document.getElementById("toggleThemeButton").onclick = function() {
+    // Переключение темы
+    theme === "dark" ? (theme = "light") : (theme = "dark");
+
+    // Применение новых стилей
+    appContainer.style.backgroundColor = themes[theme].backgroundColor;
+    appContainer.style.color = themes[theme].textColor;
+  };
+</script>
+
+
+</body>
+</html>
+
