@@ -9,3 +9,10 @@ export const getStreetsTitlesOfGovernmentBuildings = (
 export const getStreetsTitlesOfHouses = (houses: HouseType[]) => {
     return houses.map((a) => a.address.street.title);
 };
+
+export function createMessage(houses: HouseType[]) {
+    let callback = (houses: HouseType) => {
+        return `Hello guys from ${houses.address.street.title}`;
+    };
+    return houses.map(callback);
+}
